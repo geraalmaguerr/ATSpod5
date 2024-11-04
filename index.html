@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Food Menu</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Discovering the World of Food</h1>
+        <nav class="menu">
+            <button>Appetizers</button>
+            <button>Main Courses</button>
+            <button>Desserts</button>
+            <button>Drinks</button>
+        </nav>
+    </div>
+
+    <div class="food-container">
+        <div class="food-item" style="background-image: url('/ATSpod5/src/cheesy.jpg');">
+            <div class="overlay">
+                <h2>Cheesy Garlic Bread</h2>
+                <p>Crispy and flavorful, topped with melted cheese and herbs.</p>
+                <button class="edit-btn" onclick="openModal()">Edit</button>
+            </div>
+        </div>
+        <div class="food-item" style="background-image: url('/ATSpod5/src/salmon.jpg');">
+            <div class="overlay">
+                <h2>Grilled Salmon</h2>
+                <p>Perfectly grilled salmon with a lemon butter sauce.</p>
+                <button class="edit-btn" onclick="openModal()">Edit</button>
+            </div>
+        </div>
+        <div class="food-item" style="background-image: url('/ATSpod5/src/lavaCake.jpg');">
+            <div class="overlay">
+                <h2>Chocolate Lava Cake</h2>
+                <p>Warm, gooey chocolate cake with a molten center, served with vanilla ice cream.</p>
+                <button class="edit-btn" onclick="openModal()">Edit</button>
+            </div>
+        </div>
+        <div class="food-item" style="background-image: url('/ATSpod5/src/smoothie.jpg');">
+            <div class="overlay">
+                <h2>Tropical Smoothie</h2>
+                <p>A refreshing blend of mango, pineapple, and coconut, perfect for a summer day.</p>
+                <button class="edit-btn" onclick="openModal()">Edit</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="editModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Edit Food Item</h2>
+            <form>
+                <label for="food-title">Title:</label>
+                <input type="text" id="food-title" name="food-title" required>
+
+                <label for="food-description">Description:</label>
+                <textarea id="food-description" name="food-description" required></textarea>
+
+                <label for="food-image">Image URL:</label>
+                <input type="text" id="food-image" name="food-image" required>
+
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
